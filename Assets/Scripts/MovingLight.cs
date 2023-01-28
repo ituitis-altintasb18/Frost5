@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovingLight : MonoBehaviour
 {
-    private float speed = 15.0f;
+    private float speed = 3.0f;
     private GameObject player;
 
     // Update is called once per frame
