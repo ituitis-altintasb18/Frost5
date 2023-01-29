@@ -24,11 +24,7 @@ public class SpawnManager : MonoBehaviour
         sP = transform.position.y + ySpawnRange;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     IEnumerator SpawnRoutine()
     {
         while (isGameActive)
@@ -38,4 +34,5 @@ public class SpawnManager : MonoBehaviour
             yield return new WaitForSeconds(spawnRate);
         }
     }
+
 }

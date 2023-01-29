@@ -11,7 +11,7 @@ public class Shooting : MonoBehaviour
     private float timer;
     public float timeBetweenFiring;
 
-    private int ammo;
+    public int ammo;
 
     //public Light2D light2D;
 
