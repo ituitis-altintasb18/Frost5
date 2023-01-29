@@ -33,7 +33,6 @@ public class MovingLight : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(collision.gameObject);
             Destroy(gameObject);
         }
     }

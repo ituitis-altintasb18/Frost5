@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+
+    private GameObject aliveVersion;
+    private GameObject deadVersion;
+
+    Collider2D zCollider;
+
     private GameObject player;
     public float speed;
 
@@ -15,6 +21,7 @@ public class EnemyAI : MonoBehaviour
     private void Start()
     {
         nAudioSrc = GetComponent<AudioSource>();
+        zCollider = GetComponent<Collider2D>();
     }
     // Update is called once per frame
     void Update()
@@ -42,6 +49,12 @@ public class EnemyAI : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             nAudioSrc.Play();
+
+            transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(2).gameObject.SetActive(true);
+
+            zCollider.enabled = !zCollider.enabled;
+
             Destroy(collision.gameObject);
             speed = 0;
             Destroy(gameObject,2f);
