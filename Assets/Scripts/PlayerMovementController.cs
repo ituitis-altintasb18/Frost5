@@ -23,7 +23,14 @@ public class PlayerMovementController : MonoBehaviour, IMove
 
         transform.position += movement * Time.deltaTime * moveSpeed;
 
+    }
 
-
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("End"))
+        {
+            GameManager.Instance.GameWin();
+        }
     }
 }

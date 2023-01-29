@@ -80,6 +80,21 @@ public class GameManager : MonoBehaviour
             OnLightRemoved(lights);
     }
 
+    internal void BigBoom()
+    {
+        
+            lights -= 5;
+            if (OnLightRemoved != null && lights != 0)   //maximum number of lights is 9
+                OnLightRemoved(lights);
+        
+        
+    }
+
+    internal void GameWin()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     private void RestartGame()
     {
         Lives = 3;

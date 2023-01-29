@@ -25,7 +25,7 @@ public class bulletLightBounce : MonoBehaviour
             var speed = lastVelocity.magnitude;
             var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
-            rb.velocity = direction * Mathf.Max(speed, 30f);
+            rb.velocity = direction * Mathf.Max(speed, 1f);
         }
         
     }
