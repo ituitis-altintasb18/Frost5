@@ -1,7 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.Experimental.Rendering.Universal;
 
 public class Shooting : MonoBehaviour
 {
@@ -15,9 +13,15 @@ public class Shooting : MonoBehaviour
 
     private int ammo;
 
+    //public Light2D light2D;
+
+    private AudioSource mAudioSrc;
+
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        mAudioSrc = GetComponent<AudioSource>();
+        //light2D = GameObject.Find("FlashLight").GetComponent<Light2D>();
     }
 
     // Update is called once per frame
@@ -48,6 +52,10 @@ public class Shooting : MonoBehaviour
 
         if (Input.GetMouseButton(0) && canFire)
         {
+            mAudioSrc.Play();
+            //light2D.enabled = true;
+            //light2D.enabled = false;
+
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);            
         }

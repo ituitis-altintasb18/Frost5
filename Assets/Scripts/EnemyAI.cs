@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,12 @@ public class EnemyAI : MonoBehaviour
 
     public bool ChaseCheck { get; private set; }
 
+    private AudioSource nAudioSrc;
+
+    private void Start()
+    {
+        nAudioSrc = GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -18,6 +25,7 @@ public class EnemyAI : MonoBehaviour
 
         //zombie checks player scriptinde goz gibi calisan kod playeri gordu
         ChaseCheck = transform.GetChild(1).GetComponent<ZombieChecksPlayer>().isChasing;
+        
 
         //eger karakteri gorduysek ona dogru yuruduk
         if (ChaseCheck)
@@ -28,4 +36,16 @@ public class EnemyAI : MonoBehaviour
         }
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            nAudioSrc.Play();
+            Destroy(collision.gameObject);
+            speed = 0;
+            Destroy(gameObject,2f);
+        }
+    }
+
 }

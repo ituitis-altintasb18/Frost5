@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public int lights { get; private set; }
     //private Shooting shooting;
 
+    private AudioSource mAudioSrc;
+
     private void Awake()
     {
         if (Instance != null)
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        mAudioSrc = GetComponent<AudioSource>();
         //shooting = GameObject.FindWithTag("Player").GetComponent<Shooting>();
     }
 
@@ -65,6 +68,7 @@ public class GameManager : MonoBehaviour
 
     internal void AddLight()
     {
+        mAudioSrc.Play();
         lights += 3;
         if (OnLightsAdded != null && lights != 9)   //maximum number of lights is 9
             OnLightsAdded(lights);

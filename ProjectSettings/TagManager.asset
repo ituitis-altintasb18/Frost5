@@ -8,6 +8,8 @@ TagManager:
   - Trigger
   - Mirror
   - Enemy
+  - CollisionMap
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -13,8 +13,7 @@ public class Lights : MonoBehaviour
         {
             Instantiate(lightSource, transform.position, transform.rotation);
             gameObject.SetActive(false);
-            GameManager.Instance.AddLight();
-            
+            //addlight was here
             Invoke("ActivationWithDelay", 5.0f);
         }
     }
