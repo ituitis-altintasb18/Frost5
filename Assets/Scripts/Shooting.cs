@@ -6,6 +6,7 @@ public class Shooting : MonoBehaviour
     private Camera mainCam;
     private Vector3 mousePos;
     public GameObject bullet;
+    public GameObject bomb;
     public Transform bulletTransform;
     public bool canFire;
     private float timer;
@@ -58,6 +59,10 @@ public class Shooting : MonoBehaviour
 
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);            
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(bomb,transform);
         }
         
     } 
