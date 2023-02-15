@@ -10,7 +10,6 @@ public class DummyEnemyAI : MonoBehaviour
 
     Collider2D zCollider;
 
-    public bool ChaseCheck { get; private set; }
 
     private AudioSource AudioSrc;
 
