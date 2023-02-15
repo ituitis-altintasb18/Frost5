@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIAmmoText : MonoBehaviour
 {
     private Text textForAmmo;
-    private int ammoCount = 0;
+    private int ammoCount;
 
     private void Awake()
     {
@@ -14,13 +14,13 @@ public class UIAmmoText : MonoBehaviour
     }
     private void Start()
     {
-        ammoCount = ammoCount - 1;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        ammoCount = GameObject.Find("RotatePoint").GetComponent<Shooting>().ammo + 1;
+        ammoCount = GameObject.Find("RotatePoint").GetComponent<Shooting>().ammo;
         textForAmmo.text = ammoCount.ToString();
     }
 }

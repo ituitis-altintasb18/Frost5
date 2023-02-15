@@ -22,8 +22,8 @@ TagManager:
   - LightSource
   - Player
   - LightBullet
-  - 
-  - 
+  - Enemy
+  - Bomb
   - 
   - 
   - 

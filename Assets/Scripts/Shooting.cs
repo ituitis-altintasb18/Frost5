@@ -20,6 +20,7 @@ public class Shooting : MonoBehaviour
 
     void Start()
     {
+        ammo = 0;
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         mAudioSrc = GetComponent<AudioSource>();
         //light2D = GameObject.Find("FlashLight").GetComponent<Light2D>();

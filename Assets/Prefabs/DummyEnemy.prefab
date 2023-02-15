@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3948495687345283163}
   - component: {fileID: 4527982016498566107}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 3731390671300889836}
   - component: {fileID: 3731390671300889837}
   - component: {fileID: 3731390671300889826}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ZombieVisionRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3907707572312070240}
   - component: {fileID: 3907707572312070241}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Alive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 3907707572488441295}
   - component: {fileID: 8045189256976172107}
   - component: {fileID: 5722482013585581986}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DummyEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
